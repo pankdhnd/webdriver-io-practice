@@ -1,53 +1,3 @@
-
-
-//print to console
-console.log("Hello World")
-
-/*Usually var is used to define a varaible like say: var a=5. But in latest version (upcoming version, "let" is supported instead of var) There are some
-differences in var and let. We have to choose what to use according to our needs:
-Differences:
-1. Using var we can re-delare a varaible anywhere in the script. let keyword won't allow the redeclaration.
-*/
-//Variable declaration
-let a = 2
-let b = 2
-const flag = true
-
-console.log(a + b)
-
-//lets define a string
-let str = "test string"
-
-//check data type of variable
-console.log(typeof (str))
-
-//If else
-let c = 5
-if (c == 5) {
-	console.log("C is 5")
-} else {
-	console.log("C is not 5")
-}
-
-//While loop
-var d = 0
-while (d <= 3) {
-	//console.log(d)
-	d++
-}
-
-//Do while loop
-d = 0
-do {
-	//console.log(d)
-	d++
-} while (d < 3);
-
-//For loop
-for (let i = 0; i < 3; i++) {
-	console.log(i)
-}
-
 //Arrays
 var marks = Array(5)
 new Array(10, 20, 30, 40, 50)
@@ -96,7 +46,18 @@ value of the array during each iteration. In the next part after =>, we are perf
 0 or not.
 */
 var numbers = [15, 85, 9, 45, 36, 98, 25, 65]
-var filteredNumbers = numbers.filter(stored_element => stored_element % 2 == 0)
+var filteredArray = numbers.filter(stored_element => stored_element % 2 == 0)
 
-console.log("Filtered array: " + filteredNumbers)
+console.log("Filtered array: " + filteredArray)
 
+//Map array function
+var mappedArray = filteredArray.map(stored_value=>stored_value*3)
+
+console.log("Mapped array: " + mappedArray)
+
+console.log("Summed final array: " + mappedArray.reduce((accumulator,current)=> accumulator+current,0))
+
+
+//All of above array calculation in one single line
+var finalArray = numbers.filter(stored_data=>stored_data%2==0).map(stored_data=>stored_data*3).reduce((accumulator,current)=>accumulator+current,+0)
+console.log("Final Result: " + finalArray)

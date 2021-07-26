@@ -61,3 +61,43 @@ console.log("Summed final array: " + mappedArray.reduce((accumulator,current)=> 
 //All of above array calculation in one single line
 var finalArray = numbers.filter(stored_data=>stored_data%2==0).map(stored_data=>stored_data*3).reduce((accumulator,current)=>accumulator+current,+0)
 console.log("Final Result: " + finalArray)
+
+//String Array sort
+var fruits = ["Peach", "Ratal", "Banana","Mango","Jackfruit","Strawberry"]
+fruits.sort()
+console.log("Sorted array: " + fruits)
+
+//Integer Arry sort
+
+
+/*with named function
+nums.sort(function(a,b){
+    return a-b
+})
+*/
+
+//with anonymous function
+//console.log(nums.sort((a,b)=>a-b))
+//var nums = [8,3,6,5,-5,-9,96,15,365,-999]
+var nums = [1,2,4,5,6,7,8,3]
+console.log("\n\nOriginal array: " + nums)
+console.log("Sorted Array: " + bubblesort(nums))
+
+function bubblesort(arr) {
+    var flag = false
+	for (i = 0; i < arr.length; i++) {
+		if (arr[i] > arr[i + 1]) {			
+            //swap array elements
+			temp = arr[i];			
+			arr[i] = arr[i + 1]			
+			arr[i + 1] = temp			
+
+            //set flag so that logic can determine whether to re-iterate
+            flag = true
+		}
+	}
+    if (flag){
+	bubblesort(arr)    
+    }
+    return arr
+}

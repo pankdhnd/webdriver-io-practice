@@ -10,7 +10,7 @@ Differences:
 //Variable declaration
 let a = 2
 let b = 2
-const flag = true
+const flag = true //const cannot be reinitialized
 
 console.log(a + b)
 

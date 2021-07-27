@@ -5,6 +5,7 @@ console.log("Hello World")
 differences in var and let. We have to choose what to use according to our needs:
 Differences:
 1. Using var we can re-delare a varaible anywhere in the script. let keyword won't allow the redeclaration.
+2. Scope for let is limited to the block, wherewas var is available globally
 */
 //Variable declaration
 let a = 2

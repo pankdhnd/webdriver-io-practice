@@ -77,8 +77,17 @@ nums.sort(function(a,b){
 */
 
 //with anonymous function
-//console.log(nums.sort((a,b)=>a-b))
-//var nums = [8,3,6,5,-5,-9,96,15,365,-999]
+var nums = [8,3,6,5,-5,-9,96,15,365,-999]
+console.log(nums.sort((a,b)=>a-b))
+
+
+//Reverse an arry
+console.log("Reverse sorted array: " + nums.reverse())
+
+//OR in the sort function, we can alter the order of variables from a-b to b-a
+console.log(nums.sort((a,b)=>b-a))
+
+/* My bubblesort logic
 var nums = [1,2,4,5,6,7,8,3]
 console.log("\n\nOriginal array: " + nums)
 console.log("Sorted Array: " + bubblesort(nums))
@@ -101,3 +110,4 @@ function bubblesort(arr) {
     }
     return arr
 }
+*/
